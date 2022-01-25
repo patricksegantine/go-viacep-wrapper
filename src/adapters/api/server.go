@@ -11,5 +11,5 @@ func Run() {
 	app := configs.App()
 
 	fmt.Printf("API is running at PORT %v", os.Getenv("PORT"))
-	log.Fatal(app.Listen(":8080"))
+	log.Fatal(app.Listen(":" + os.Getenv("PORT")))
 }
